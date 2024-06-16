@@ -1,0 +1,25 @@
+Admin Dashboard From Scratch - Next.js, TypeScript, Shadcn/ui
+
+https://github.com/bradtraversy/traversypress-ui
+https://github.com/Annie-Huang/traversypress-ui
+
+https://ui.shadcn.com/docs/installation/next
+
+============================================================================================
+
+PS C:\react> npx create-next-app@latest my-app --typescript --tailwind --eslint
+Terminate batch job (Y/N)? y
+PS C:\react> npx create-next-app@latest traversypress-ui --typescript --tailwind --eslint
+Need to install the following packages:
+  create-next-app@latest
+Ok to proceed? (y) y
+√ Would you like to use `src/` directory? ... No / Yes
+√ Would you like to use App Router? (recommended) ... No / Yes
+√ Would you like to customize the default import alias (@/*)? ... No / Yes
+Creating a new Next.js app in C:\react\traversypress-ui.
+
+Using npm.
+
+Initializing project with template: app-tw
+
+-------------------------------------------------------
