@@ -40,3 +40,5 @@ Ok to proceed? (y) y
 Success! Project initialization completed. You may now add components.
 
 -------------------------------------------------------
+
+PS C:\react\traversypress-ui> npx shadcn-ui@latest add button
