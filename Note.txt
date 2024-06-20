@@ -45,3 +45,4 @@ Success! Project initialization completed. You may now add components.
 PS C:\react\traversypress-ui> npx shadcn-ui@latest add button
 PS C:\react\traversypress-ui> npx shadcn-ui@latest add avatar
 PS C:\react\traversypress-ui> npx shadcn-ui@latest add dropdown-menu
+PS C:\react\traversypress-ui> npm i lucide-react
