@@ -2,6 +2,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../img/logo.png';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 const Navbar = () => {
   return (
@@ -9,11 +17,24 @@ const Navbar = () => {
       <Link href='/'>
         <Image src={logo} alt='TraversyPress' width={40} />
       </Link>
-      <Avatar>
-        <AvatarImage src='https://github.com/shadcn.png' alt='@shadcn' />
-        {/* The fallback is in case the image src does not exists, like src='https://github.com/shadcn1.png' */}
-        <AvatarFallback className='text-black'>BT</AvatarFallback>
-      </Avatar>
+
+      <DropdownMenu>
+        <DropdownMenuTrigger>
+          <Avatar>
+            <AvatarImage src='https://github.com/shadcn.png' alt='@shadcn' />
+            {/* The fallback is in case the image src does not exists, like src='https://github.com/shadcn1.png' */}
+            <AvatarFallback className='text-black'>BT</AvatarFallback>
+          </Avatar>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent>
+          <DropdownMenuLabel>My Account</DropdownMenuLabel>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem>Profile</DropdownMenuItem>
+          <DropdownMenuItem>Billing</DropdownMenuItem>
+          <DropdownMenuItem>Team</DropdownMenuItem>
+          <DropdownMenuItem>Subscription</DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
     </div>
   );
 };
