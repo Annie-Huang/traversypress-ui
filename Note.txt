@@ -5,7 +5,7 @@ https://github.com/Annie-Huang/traversypress-ui
 
 https://ui.shadcn.com/docs/installation/next
 https://ui.shadcn.com/docs/components/avatar
-
+https://ui.shadcn.com/docs/components/dropdown-menu
 ============================================================================================
 
 PS C:\react> npx create-next-app@latest my-app --typescript --tailwind --eslint
@@ -44,3 +44,4 @@ Success! Project initialization completed. You may now add components.
 
 PS C:\react\traversypress-ui> npx shadcn-ui@latest add button
 PS C:\react\traversypress-ui> npx shadcn-ui@latest add avatar
+PS C:\react\traversypress-ui> npx shadcn-ui@latest add dropdown-menu
