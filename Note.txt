@@ -4,6 +4,7 @@ https://github.com/bradtraversy/traversypress-ui
 https://github.com/Annie-Huang/traversypress-ui
 
 https://ui.shadcn.com/docs/installation/next
+https://ui.shadcn.com/docs/components/avatar
 
 ============================================================================================
 
@@ -42,3 +43,4 @@ Success! Project initialization completed. You may now add components.
 -------------------------------------------------------
 
 PS C:\react\traversypress-ui> npx shadcn-ui@latest add button
+PS C:\react\traversypress-ui> npx shadcn-ui@latest add avatar
