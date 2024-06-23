@@ -21,14 +21,23 @@ import Link from 'next/link';
 
 const Sidebar = () => {
   return (
-    <Command>
+    <Command className='bg-secondary rounded-none'>
       <CommandInput placeholder='Type a command or search...' />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
         <CommandGroup heading='Suggestions'>
-          <CommandItem>Calendar</CommandItem>
-          <CommandItem>Search Emoji</CommandItem>
-          <CommandItem>Calculator</CommandItem>
+          <CommandItem>
+            <LayoutDashboard className='mr-2 h-4 w-4' />
+            <Link href='/'>Dashboard</Link>
+          </CommandItem>
+          <CommandItem>
+            <Newspaper className='mr-2 h-4 w-4' />
+            <Link href='/posts'>Posts</Link>
+          </CommandItem>
+          <CommandItem>
+            <Folders className='mr-2 h-4 w-4' />
+            <Link href='#'>Categories</Link>
+          </CommandItem>
         </CommandGroup>
         <CommandSeparator />
         <CommandGroup heading='Settings'>
