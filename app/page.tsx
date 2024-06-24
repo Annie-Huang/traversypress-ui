@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import DashboardCard from '@/components/dashboard/DashboardCard';
+import { Newspaper } from 'lucide-react';
 
 /*
   <Button variant='destructive' size='lg' className='text-blue-400'>
@@ -10,7 +11,11 @@ export default function Home() {
   return (
     <>
       <div className='flex flex-col md:flex-row justify-between gap-5 mb-5'>
-        <DashboardCard />
+        <DashboardCard
+          title='Posts'
+          count={100}
+          icon={<Newspaper className='text-slate-500' size={72} />}
+        />
       </div>
     </>
   );
