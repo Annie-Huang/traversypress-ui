@@ -11,7 +11,13 @@ import Link from 'next/link';
 import posts from '@/data/posts';
 import { Post } from '@/types/posts';
 
-const PostsTable = () => {
+interface PostsTableProps {
+  limit?: number;
+  title?: string;
+}
+
+// const PostsTable = () => {
+const PostsTable = ({ limit, title }: PostsTableProps) => {
   return <div>Posts</div>;
 };
 
