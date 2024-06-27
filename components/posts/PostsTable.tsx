@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PostsTable = () => {
-  return <div></div>;
+  return <div>Posts</div>;
 };
 
 export default PostsTable;
