@@ -53,4 +53,4 @@ PS C:\react\traversypress-ui> npx shadcn-ui@latest add command
 PS C:\react\traversypress-ui> npx shadcn-ui@latest add dialog
 PS C:\react\traversypress-ui> npx shadcn-ui@latest add card
 PS C:\react\traversypress-ui> npx shadcn-ui@latest add table
-
+PS C:\react\traversypress-ui> npm i recharts
