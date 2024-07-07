@@ -59,3 +59,4 @@ PS C:\react\traversypress-ui> npm i cmdk    <-- required for command component
 PS C:\react\traversypress-ui> npx shadcn-ui@latest add pagination
 PS C:\react\traversypress-ui> npx shadcn-ui@latest add form     <-- use react-hook-form and zod
 PS C:\react\traversypress-ui> npx shadcn-ui@latest add input
+PS C:\react\traversypress-ui> npx shadcn-ui@latest add textarea
