@@ -1,9 +1,10 @@
+import BackButton from '@/components/BackButton';
 import PostsTable from '@/components/posts/PostsTable';
-import React from 'react';
 
 const Page = () => {
   return (
     <>
+      <BackButton text='Go Back' link='/' />
       <PostsTable />
     </>
   );
