@@ -32,7 +32,15 @@ const formSchema = z.object({
   }),
 });
 
-const Page = () => {
+interface PostEditPageProps {
+  params: {
+    id: string;
+  };
+}
+const Page = ({ params }: PostEditPageProps) => {
+  const post = posts.find((post) => post.id === params.id);
+  console.log('post=', post);
+
   return (
     <>
       <BackButton text='Back to Posts' link='/posts' />
