@@ -9,6 +9,7 @@ https://ui.shadcn.com/docs/components/dropdown-menu
 https://ui.shadcn.com/docs/components/command
 https://ui.shadcn.com/docs/components/dialog
 https://ui.shadcn.com/docs/components/card
+https://ui.shadcn.com/docs/components/pagination
 ============================================================================================
 
 PS C:\react> npx create-next-app@latest my-app --typescript --tailwind --eslint
