@@ -63,16 +63,19 @@ const Page = ({ params }: PostEditPageProps) => {
         <form onSubmit={form.handleSubmit(handleSubmit)} className='space-y-8'>
           <FormField
             control={form.control}
-            name='username'
+            name='title'
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Username</FormLabel>
+                <FormLabel className='uppercase text-xs font-bold text-zinc-500 dark:text-white'>
+                  Title
+                </FormLabel>
                 <FormControl>
-                  <Input placeholder='shadcn' {...field} />
+                  <Input
+                    className='bg-slate-100 dark:bg-slate-500 border-0 focus-visible:ring-0 text-black dark:text-white focus-visible:ring-offset-0'
+                    placeholder='Enter Title'
+                    {...field}
+                  />
                 </FormControl>
-                <FormDescription>
-                  This is your public display name.
-                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}
