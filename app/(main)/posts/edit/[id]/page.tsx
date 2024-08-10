@@ -16,6 +16,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import posts from '@/data/posts';
+import { useToast } from '@/components/ui/use-toast';
 
 const formSchema = z.object({
   title: z.string().min(1, {
@@ -38,6 +39,8 @@ interface PostEditPageProps {
   };
 }
 const Page = ({ params }: PostEditPageProps) => {
+  const { toast } = useToast();
+
   const post = posts.find((post) => post.id === params.id);
   // console.log('post=', post);
 
@@ -52,7 +55,11 @@ const Page = ({ params }: PostEditPageProps) => {
   });
 
   const handleSubmit = (data: z.infer<typeof formSchema>) => {
-    console.log(data);
+    // console.log(data);
+    toast({
+      title: 'Post has been updated successfully',
+      description: `Updated by ${post?.author} on ${post?.date}`,
+    });
   };
 
   return (
