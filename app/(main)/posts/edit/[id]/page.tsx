@@ -60,10 +60,24 @@ const Page = ({ params }: PostEditPageProps) => {
       <BackButton text='Back to Posts' link='/posts' />
       <h3 className='text-2xl mb-4'>Edit Post</h3>
       <Form {...form}>
-        <form
-          onSubmit={form.handleSubmit(handleSubmit)}
-          className='space-y-8'
-        ></form>
+        <form onSubmit={form.handleSubmit(handleSubmit)} className='space-y-8'>
+          <FormField
+            control={form.control}
+            name='username'
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Username</FormLabel>
+                <FormControl>
+                  <Input placeholder='shadcn' {...field} />
+                </FormControl>
+                <FormDescription>
+                  This is your public display name.
+                </FormDescription>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </form>
       </Form>
     </>
   );

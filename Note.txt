@@ -10,6 +10,7 @@ https://ui.shadcn.com/docs/components/command
 https://ui.shadcn.com/docs/components/dialog
 https://ui.shadcn.com/docs/components/card
 https://ui.shadcn.com/docs/components/pagination
+https://ui.shadcn.com/docs/components/form
 ============================================================================================
 
 PS C:\react> npx create-next-app@latest my-app --typescript --tailwind --eslint
@@ -60,3 +61,8 @@ PS C:\react\traversypress-ui> npx shadcn-ui@latest add pagination
 PS C:\react\traversypress-ui> npx shadcn-ui@latest add form     <-- use react-hook-form and zod
 PS C:\react\traversypress-ui> npx shadcn-ui@latest add input
 PS C:\react\traversypress-ui> npx shadcn-ui@latest add textarea
+
+
+
+http://localhost:3000/
+http://localhost:3000/posts/edit/10
