@@ -61,7 +61,7 @@ PS C:\react\traversypress-ui> npx shadcn-ui@latest add pagination
 PS C:\react\traversypress-ui> npx shadcn-ui@latest add form     <-- use react-hook-form and zod
 PS C:\react\traversypress-ui> npx shadcn-ui@latest add input
 PS C:\react\traversypress-ui> npx shadcn-ui@latest add textarea
-
+PS C:\react\traversypress-ui> npx shadcn-ui@latest add toast
 
 
 http://localhost:3000/
