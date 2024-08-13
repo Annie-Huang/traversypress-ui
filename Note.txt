@@ -11,6 +11,8 @@ https://ui.shadcn.com/docs/components/dialog
 https://ui.shadcn.com/docs/components/card
 https://ui.shadcn.com/docs/components/pagination
 https://ui.shadcn.com/docs/components/form
+https://ui.shadcn.com/docs/dark-mode/next
+
 ============================================================================================
 
 PS C:\react> npx create-next-app@latest my-app --typescript --tailwind --eslint
@@ -62,6 +64,7 @@ PS C:\react\traversypress-ui> npx shadcn-ui@latest add form     <-- use react-ho
 PS C:\react\traversypress-ui> npx shadcn-ui@latest add input
 PS C:\react\traversypress-ui> npx shadcn-ui@latest add textarea
 PS C:\react\traversypress-ui> npx shadcn-ui@latest add toast
+PS C:\react\traversypress-ui> npm install next-themes
 
 
 http://localhost:3000/
