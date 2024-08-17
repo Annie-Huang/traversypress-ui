@@ -1,6 +1,5 @@
 'use client';
 
-import BackButton from '@/components/BackButton';
 import * as z from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -14,6 +13,7 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/router';
 
 const formSchema = z.object({
   email: z
@@ -30,6 +30,8 @@ const formSchema = z.object({
 });
 
 const LoginForm = () => {
+  const router = useRouter();
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -38,11 +40,12 @@ const LoginForm = () => {
     },
   });
 
-  const handleSubmit = (data: z.infer<typeof formSchema>) => {};
+  const handleSubmit = (data: z.infer<typeof formSchema>) => {
+    router.push('/');
+  };
 
   return (
     <>
-      <BackButton text='Back to Posts' link='/posts' />
       <h3 className='text-2xl mb-4'>Edit Post</h3>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className='space-y-8'>
