@@ -1,5 +1,7 @@
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import LoginForm from './LoginForm';
+import RegisterForm from './RegisterForm';
 
 const AuthTabs = () => {
   return (
@@ -8,8 +10,12 @@ const AuthTabs = () => {
         <TabsTrigger value='login'>Login</TabsTrigger>
         <TabsTrigger value='register'>register</TabsTrigger>
       </TabsList>
-      <TabsContent value='login'>LOGIN</TabsContent>
-      <TabsContent value='register'>REGISTER</TabsContent>
+      <TabsContent value='login'>
+        <LoginForm />
+      </TabsContent>
+      <TabsContent value='register'>
+        <RegisterForm />
+      </TabsContent>
     </Tabs>
   );
 };
