@@ -23,6 +23,9 @@ import {
 } from '@/components/ui/card';
 
 const formSchema = z.object({
+  name: z.string().min(1, {
+    message: 'Name is required',
+  }),
   email: z
     .string()
     .min(1, {
@@ -34,6 +37,9 @@ const formSchema = z.object({
   password: z.string().min(1, {
     message: 'Password is required',
   }),
+  confirmPassword: z.string().min(1, {
+    message: 'Confirm Password is required',
+  }),
 });
 
 const RegisterForm = () => {
@@ -42,8 +48,10 @@ const RegisterForm = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
+      name: '',
       email: '',
       password: '',
+      confirmPassword: '',
     },
   });
 
