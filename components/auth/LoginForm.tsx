@@ -105,6 +105,8 @@ const LoginForm = () => {
                 </FormItem>
               )}
             />
+
+            <Button className='w-full'>Sign In</Button>
           </form>
         </Form>
       </CardContent>
