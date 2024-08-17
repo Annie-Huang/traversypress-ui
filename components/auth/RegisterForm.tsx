@@ -62,10 +62,8 @@ const RegisterForm = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Login</CardTitle>
-        <CardDescription>
-          Log into your account with your credentials
-        </CardDescription>
+        <CardTitle>Register</CardTitle>
+        <CardDescription>Sign up by adding the info below</CardDescription>
       </CardHeader>
       <CardContent className='space-y-2'>
         <Form {...form}>
@@ -73,6 +71,26 @@ const RegisterForm = () => {
             onSubmit={form.handleSubmit(handleSubmit)}
             className='space-y-6'
           >
+            <FormField
+              control={form.control}
+              name='name'
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className='uppercase text-xs font-bold text-zinc-500 dark:text-white'>
+                    Name
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      className='bg-slate-100 dark:bg-slate-500 border-0 focus-visible:ring-0 text-black dark:text-white focus-visible: ring-offset-0'
+                      placeholder='Enter Name'
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
             <FormField
               control={form.control}
               name='email'
@@ -106,6 +124,27 @@ const RegisterForm = () => {
                       type='password'
                       className='bg-slate-100 dark:bg-slate-500 border-0 focus-visible:ring-0 text-black dark:text-white focus-visible: ring-offset-0'
                       placeholder='Enter Password'
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name='confirmPassword'
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className='uppercase text-xs font-bold text-zinc-500 dark:text-white'>
+                    Confirm Password
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      type='password'
+                      className='bg-slate-100 dark:bg-slate-500 border-0 focus-visible:ring-0 text-black dark:text-white focus-visible: ring-offset-0'
+                      placeholder='Enter Confirm Password'
                       {...field}
                     />
                   </FormControl>
