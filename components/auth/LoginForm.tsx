@@ -14,6 +14,13 @@ import {
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/router';
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  CardContent,
+} from '@/components/ui/card';
 
 const formSchema = z.object({
   email: z
@@ -45,32 +52,42 @@ const LoginForm = () => {
   };
 
   return (
-    <>
-      <h3 className='text-2xl mb-4'>Edit Post</h3>
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(handleSubmit)} className='space-y-6'>
-          <FormField
-            control={form.control}
-            name='title'
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className='uppercase text-xs font-bold text-zinc-500 dark:text-white'>
-                  Title
-                </FormLabel>
-                <FormControl>
-                  <Input
-                    className='bg-slate-100 dark:bg-slate-500 border-0 focus-visible:ring-0 text-black dark:text-white focus-visible:ring-offset-0'
-                    placeholder='Enter Title'
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </form>
-      </Form>
-    </>
+    <Card>
+      <CardHeader>
+        <CardTitle>Login</CardTitle>
+        <CardDescription>
+          Log into your account with your credentials
+        </CardDescription>
+      </CardHeader>
+      <CardContent className='space-y-2'>
+        <Form {...form}>
+          <form
+            onSubmit={form.handleSubmit(handleSubmit)}
+            className='space-y-6'
+          >
+            <FormField
+              control={form.control}
+              name='title'
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className='uppercase text-xs font-bold text-zinc-500 dark:text-white'>
+                    Title
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      className='bg-slate-100 dark:bg-slate-500 border-0 focus-visible:ring-0 text-black dark:text-white focus-visible:ring-offset-0'
+                      placeholder='Enter Title'
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </form>
+        </Form>
+      </CardContent>
+    </Card>
   );
 };
 
