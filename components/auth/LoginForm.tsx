@@ -30,28 +30,15 @@ const formSchema = z.object({
 });
 
 const LoginForm = () => {
-  const { toast } = useToast();
-
-  const post = posts.find((post) => post.id === params.id);
-  // console.log('post=', post);
-
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      title: post?.title || '',
-      body: post?.body || '',
-      author: post?.author || '',
-      date: post?.date || '',
+      email: '',
+      password: '',
     },
   });
 
-  const handleSubmit = (data: z.infer<typeof formSchema>) => {
-    // console.log(data);
-    toast({
-      title: 'Post has been updated successfully',
-      description: `Updated by ${post?.author} on ${post?.date}`,
-    });
-  };
+  const handleSubmit = (data: z.infer<typeof formSchema>) => {};
 
   return (
     <>
