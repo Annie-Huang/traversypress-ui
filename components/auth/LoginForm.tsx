@@ -13,32 +13,23 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
-import posts from '@/data/posts';
-import { useToast } from '@/components/ui/use-toast';
 
 const formSchema = z.object({
-  title: z.string().min(1, {
-    message: 'Title is required',
-  }),
-  body: z.string().min(1, {
-    message: 'Body is required',
-  }),
-  author: z.string().min(1, {
-    message: 'Author is required',
-  }),
-  date: z.string().min(1, {
-    message: 'Date is required',
+  email: z
+    .string()
+    .min(1, {
+      message: 'Email is required',
+    })
+    .email({
+      message: 'Please enter a valid email',
+    }),
+  password: z.string().min(1, {
+    message: 'Password is required',
   }),
 });
 
-interface LoginFormProps {
-  params: {
-    id: string;
-  };
-}
-const LoginForm = ({ params }: LoginFormProps) => {
+const LoginForm = () => {
   const { toast } = useToast();
 
   const post = posts.find((post) => post.id === params.id);
