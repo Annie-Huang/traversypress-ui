@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation'; // Need to use the one in navigation, not the one in router.
 import {
   Card,
   CardDescription,
@@ -67,16 +67,37 @@ const LoginForm = () => {
           >
             <FormField
               control={form.control}
-              name='title'
+              name='email'
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className='uppercase text-xs font-bold text-zinc-500 dark:text-white'>
-                    Title
+                    Email
                   </FormLabel>
                   <FormControl>
                     <Input
                       className='bg-slate-100 dark:bg-slate-500 border-0 focus-visible:ring-0 text-black dark:text-white focus-visible:ring-offset-0'
-                      placeholder='Enter Title'
+                      placeholder='Enter Email'
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name='password'
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className='uppercase text-xs font-bold text-zinc-500 dark:text-white'>
+                    Password
+                  </FormLabel>
+                  <FormControl>
+                    <Input
+                      type='password'
+                      className='bg-slate-100 dark:bg-slate-500 border-0 focus-visible:ring-0 text-black dark:text-white focus-visible: ring-offset-0'
+                      placeholder='Enter Password'
                       {...field}
                     />
                   </FormControl>
